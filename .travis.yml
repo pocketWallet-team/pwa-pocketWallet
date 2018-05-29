@@ -1,6 +1,6 @@
 language: node_js
 node_js:
-  - "10"
+  - "8"
 addons:
   sonarcloud:
     organization: $sonarcloud_organization_key
@@ -14,7 +14,7 @@ matrix:
 before_install:
   - export APP_VERSION=$(node -p "require('./package.json').version")
 install:
-  - npm ci
+  - npm i
 script:
   - npm run lint
   - npm run test
