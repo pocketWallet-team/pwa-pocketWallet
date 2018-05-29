@@ -1,0 +1,25 @@
+language: node_js
+node_js:
+  - "8"
+addons:
+  sonarcloud:
+    organization: $sonarcloud_organization_key
+    token: $sonarcloud_token
+  firefox: latest
+cache:
+  directories:
+    - node_modules
+matrix:
+  fast_finish: true
+before_install:
+  - export APP_VERSION=$(node -p "require('./package.json').version")
+install:
+  - npm i
+script:
+  - npm run lint
+  - npm run test
+after_success:
+  - sonar-scanner -Dsonar.projectVersion=$APP_VERSION
+  - npm run build
+before_deploy:
+  - echo "before deploy steps"
