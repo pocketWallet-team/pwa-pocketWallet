@@ -99,6 +99,36 @@
         }
       }
     },
+    "pwa-pocketWallet-ci": {
+      "root": "",
+      "sourceRoot": "src",
+      "projectType": "application",
+      "prefix": "ppw",
+      "schematics": {
+        "@schematics/angular:component": {
+          "styleext": "scss"
+        }
+      },
+      "architect": {
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "src/test.ts",
+            "polyfills": "src/polyfills.ts",
+            "tsConfig": "src/tsconfig.spec.json",
+            "karmaConfig": "src/ci.karma.conf.js",
+            "styles": [
+              "src/styles.scss"
+            ],
+            "scripts": [],
+            "assets": [
+              "src/favicon.ico",
+              "src/assets"
+            ]
+          }
+        }
+      }
+    },
     "pwa-pocketWallet-e2e": {
       "root": "e2e/",
       "projectType": "application",
@@ -117,6 +147,19 @@
             "exclude": [
               "**/node_modules/**"
             ]
+          }
+        }
+      }
+    },
+    "pwa-pocketWallet-e2e-ci": {
+      "root": "e2e/",
+      "projectType": "application",
+      "architect": {
+        "e2e": {
+          "builder": "@angular-devkit/build-angular:protractor",
+          "options": {
+            "protractorConfig": "e2e/ci.protractor.conf.js",
+            "devServerTarget": "pwa-pocketWallet:serve"
           }
         }
       }
