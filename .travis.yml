@@ -1,0 +1,36 @@
+language: node_js
+node_js:
+  - "8"
+addons:
+  sonarcloud:
+    organization: $sonarcloud_organization_key
+    token: $sonarcloud_token
+  firefox: latest
+cache:
+  directories:
+    - node_modules
+matrix:
+  fast_finish: true
+before_install:
+  - export APP_VERSION=$(node -p "require('./package.json').version")
+install:
+  - npm i
+script:
+  - npm run lint
+  - npm run test
+#  - npm run e2e
+after_success:
+  - sonar-scanner -Dsonar.projectVersion=$APP_VERSION
+  - npm run build
+  - sh scripts/patch-gh-pages.sh
+before_deploy:
+  - echo "before deploy steps"
+deploy:
+  - provider: pages
+    local_dir: dist/pwa-pocketWallet
+    skip_cleanup: true
+    repo: pocketWallet/pocketwallet.github.io
+    target-branch: master
+    github_token: $GITHUB_TOKEN # Set in travis-ci.org dashboard
+    on:
+      branch: master
