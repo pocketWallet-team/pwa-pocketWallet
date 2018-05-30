@@ -4,7 +4,7 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build",
+    "build": "ng build --prod",
     "test": "ng test --project pwa-pocketWallet-ci",
     "lint": "ng lint",
     "pree2e": "webdriver-manager update --gecko",
