@@ -15,11 +15,11 @@ before_install:
   - export APP_VERSION=$(node -p "require('./package.json').version")
 install:
   - npm i
-script:
-  - npm run lint
-  - npm run test
+#script:
+#  - npm run lint
+#  - npm run test
 after_success:
-  - sonar-scanner -Dsonar.projectVersion=$APP_VERSION
+#  - sonar-scanner -Dsonar.projectVersion=$APP_VERSION
   - npm run build
   - sh scripts/patch-gh-pages.sh
 before_deploy:
@@ -28,7 +28,8 @@ deploy:
   - provider: pages
     local_dir: dist/pwa-pocketWallet
     skip_cleanup: true
-    repo: git@github.com:pocketWallet/pocketwallet.github.io.git
+    repo: pocketWallet/pocketwallet.github.io.git
+    target-branch: master
     github_token: $GITHUB_TOKEN # Set in travis-ci.org dashboard
     on:
       branch: feature/gh-builds
