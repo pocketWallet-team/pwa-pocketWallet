@@ -28,6 +28,7 @@ deploy:
   - provider: pages
     local_dir: dist/pwa-pocketWallet
     skip_cleanup: true
+    repo: git@github.com:pocketWallet/pocketwallet.github.io.git
     github_token: $GITHUB_TOKEN # Set in travis-ci.org dashboard
     on:
       branch: feature/gh-builds
