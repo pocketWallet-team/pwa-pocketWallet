@@ -8,15 +8,15 @@ import {MatToolbarModule} from '@angular/material/toolbar';
 import { LayoutModule } from '@angular/cdk/layout';
 import { MatButtonModule } from '@angular/material';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MyNavComponent } from './my-nav.component';
+import { LandingComponent } from './landing.component';
 
-describe('MyNavComponent', () => {
-  let component: MyNavComponent;
-  let fixture: ComponentFixture<MyNavComponent>;
+describe('LandingComponent', () => {
+  let component: LandingComponent;
+  let fixture: ComponentFixture<LandingComponent>;
 
   beforeEach(fakeAsync(() => {
     TestBed.configureTestingModule({
-      declarations: [ MyNavComponent ],
+      declarations: [ LandingComponent ],
       imports: [
         LayoutModule,
         MatToolbarModule,
@@ -29,7 +29,7 @@ describe('MyNavComponent', () => {
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(MyNavComponent);
+    fixture = TestBed.createComponent(LandingComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   }));
