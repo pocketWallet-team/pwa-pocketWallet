@@ -4,12 +4,11 @@ import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
 
 @Component({
-  selector: 'ppw-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss'],
+  selector: 'ppw-landing',
+  templateUrl: './landing.component.html',
+  styleUrls: ['./landing.component.css'],
 })
-export class AppComponent {
-  title = 'ppw';
+export class LandingComponent {
 
   isHandset$: Observable<boolean> = this.breakpointObserver.observe(Breakpoints.Handset)
     .pipe(
