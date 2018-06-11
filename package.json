@@ -1,6 +1,6 @@
 {
   "name": "pwa-pocket-wallet",
-  "version": "0.0.3",
+  "version": "0.0.4-beta",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
