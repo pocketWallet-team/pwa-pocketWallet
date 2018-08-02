@@ -1,5 +1,7 @@
 # PwaPocketWallet
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/pocketWallet/pwa-pocketWallet.svg)](https://greenkeeper.io/)
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.0.5.
 
 ## Development server
