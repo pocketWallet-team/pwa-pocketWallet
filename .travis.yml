@@ -1,6 +1,6 @@
 language: node_js
 node_js:
-  - "10.7.0"
+  - "10.11.0"
 addons:
   sonarcloud:
     organization: $sonarcloud_organization_key
@@ -18,7 +18,7 @@ install:
 script:
   - npm run lint
   - npm run test
-#  - npm run e2e
+  - npm run e2e
 after_success:
   - sonar-scanner -Dsonar.projectVersion=$APP_VERSION
   - npm run build
