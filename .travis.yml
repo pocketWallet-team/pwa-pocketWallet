@@ -12,6 +12,7 @@ cache:
 matrix:
   fast_finish: true
 before_install:
+  - pip install --user codecov
   - export APP_VERSION=$(node -p "require('./package.json').version")
 install:
   - npm i
@@ -21,6 +22,7 @@ script:
 #  - npm run e2e
 after_success:
   - sonar-scanner -Dsonar.projectVersion=$APP_VERSION
+  - codecov
   - npm run build
   - sh scripts/patch-gh-pages.sh
 before_deploy:
