@@ -4,6 +4,8 @@
 
 [![Greenkeeper badge](https://badges.greenkeeper.io/pocketWallet/pwa-pocketWallet.svg)](https://greenkeeper.io/)
 
+[![Build Status](https://travis-ci.org/pocketWallet/pwa-pocketWallet.svg?branch=master)](https://travis-ci.org/pocketWallet/pwa-pocketWallet)
+
 [![sonar Badge](https://sonarcloud.io/api/project_badges/measure?branch=develop&project=io.github.pocketwallet.pwa&metric=alert_status)](https://sonarcloud.io/dashboard?branch=develop&id=io.github.pocketwallet.pwa)
 
 [![codecov](https://codecov.io/gh/pocketWallet/pwa-pocketWallet/branch/master/graph/badge.svg)](https://codecov.io/gh/pocketWallet/pwa-pocketWallet)
