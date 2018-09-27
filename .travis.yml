@@ -12,7 +12,7 @@ cache:
 matrix:
   fast_finish: true
 before_install:
-  - bash < (curl -s https://codecov.io/bash)
+  - pip install --user codecov
   - export APP_VERSION=$(node -p "require('./package.json').version")
 install:
   - npm i
