@@ -1,5 +1,13 @@
 # PwaPocketWallet
 
+
+
+[![Greenkeeper badge](https://badges.greenkeeper.io/pocketWallet/pwa-pocketWallet.svg)](https://greenkeeper.io/)
+
+[![sonar Badge](https://sonarcloud.io/api/project_badges/measure?branch=develop&project=io.github.pocketwallet.pwa&metric=alert_status)](https://sonarcloud.io/dashboard?branch=develop&id=io.github.pocketwallet.pwa)
+
+[![codecov](https://codecov.io/gh/pocketWallet/pwa-pocketWallet/branch/master/graph/badge.svg)](https://codecov.io/gh/pocketWallet/pwa-pocketWallet)
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.0.5.
 
 ## Development server
